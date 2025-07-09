@@ -32,7 +32,7 @@ export default function AnalysisPage() {
 
   // Mock analysis data
   const analysis = {
-    stockName: "AAPL (Apple Inc.)",
+    stockName: "tesla (TT Inc.)",
     pattern: "Double Bottom",
     sentiment: "bullish",
     summary:
