@@ -26,14 +26,14 @@ export default function LoginPage() {
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session)
-      if (session) router.push("https://chart-analysis-parthpangavhanes-projects.vercel.app/dashboard")
+      if (session) router.push("/dashboard")
     })
 
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
       setSession(session)
-      if (session) router.push("https://chart-analysis-parthpangavhanes-projects.vercel.app/dashboard")
+      if (session) router.push("/dashboard")
     })
 
     return () => subscription.unsubscribe()
